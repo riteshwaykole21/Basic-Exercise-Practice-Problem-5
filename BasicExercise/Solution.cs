@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,29 +12,28 @@ namespace BasicExercise
     {
         public void Number()
         {
+            string Name = "51654ssdrtdf";
             string Letter = "";
             string Digit = "";
-            int a = 0;
-            int b = 0;
-            string Name = "21Ritesh";
-            char[] Chars = Name.ToCharArray();
-            for(int i = 0; i < Chars.Length; i++)
+            int Num = 0;
+            int let = 0;    
+            foreach(char c in Name)
             {
-                if(Char.IsDigit(Chars[i]))
+                if (Char.IsDigit(c))
                 {
-                     Digit += Chars[i];
-                     a++;    
+                    Digit += c;
+                    Num++;  
                 }
-                else if (Char.IsLetter(Chars[i]))
+                else if (Char.IsLetter(c))
                 {
-                    Letter += Chars[i];
-                    b++;
+                    Letter += c;
+                    let++;
                 }
             }
-            Console.WriteLine(Digit);
-            Console.WriteLine(Letter);
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            Console.WriteLine($"Total Digit in String is {Num} is As Follow {Digit}");
+            Console.WriteLine($"Total Letter in String is {let} is As Follow {Letter}");
+
+
         }
     }
 }
