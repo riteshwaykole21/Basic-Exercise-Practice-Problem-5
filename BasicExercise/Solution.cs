@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BasicExercise
@@ -10,16 +11,29 @@ namespace BasicExercise
     {
         public void Number()
         {
-            Console.WriteLine("Enter A One String");
-            string Name = Console.ReadLine();
-            int Num = 0;    
-            foreach(char iteam in Name)
+            string Letter = "";
+            string Digit = "";
+            int a = 0;
+            int b = 0;
+            string Name = "21Ritesh";
+            char[] Chars = Name.ToCharArray();
+            for(int i = 0; i < Chars.Length; i++)
             {
-                Num++;  
+                if(Char.IsDigit(Chars[i]))
+                {
+                     Digit += Chars[i];
+                     a++;    
+                }
+                else if (Char.IsLetter(Chars[i]))
+                {
+                    Letter += Chars[i];
+                    b++;
+                }
             }
-            Console.WriteLine(Num); 
-
+            Console.WriteLine(Digit);
+            Console.WriteLine(Letter);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
         }
-        
     }
 }
