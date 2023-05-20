@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -8,32 +10,20 @@ using System.Threading.Tasks;
 
 namespace BasicExercise
 {
-    public class Solution
+    public class Solution<T>
     {
-        public void Number()
+        public void Number(T Rows)
         {
-            string Name = "51654ssdrtdf";
-            string Letter = "";
-            string Digit = "";
-            int Num = 0;
-            int let = 0;    
-            foreach(char c in Name)
+            Console.WriteLine("Enter a Rows " + Rows);
+            int rows = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= rows; i++)
             {
-                if (Char.IsDigit(c))
+                for (int j = 1; j <= i; j++)
                 {
-                    Digit += c;
-                    Num++;  
+                    Console.Write("*");
                 }
-                else if (Char.IsLetter(c))
-                {
-                    Letter += c;
-                    let++;
-                }
+                Console.Write("\n");
             }
-            Console.WriteLine($"Total Digit in String is {Num} is As Follow {Digit}");
-            Console.WriteLine($"Total Letter in String is {let} is As Follow {Letter}");
-
-
         }
     }
 }
