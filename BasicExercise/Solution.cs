@@ -15,16 +15,17 @@ namespace BasicExercise
         public void Number()
         {
             Console.WriteLine("Enter The Size Of Array");
-            int Size = Convert.ToInt32(Console.ReadLine());
-            int[] ints = new int[Size];
-            Console.WriteLine("Enter The Array Element");
-            for(int i = 0; i < Size; i++)
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] Array = new int[size];
+            Console.WriteLine("Enter The Element of An Array");
+            for(int i = 0; i < size; i++)
             {
-                ints[i] = Convert.ToInt32(Console.ReadLine());
+                Array[i] = Convert.ToInt32(Console.ReadLine()); 
             }
-            for(int i = 0; i < ints.Length; i++)
+            Console.WriteLine("The Reverse Of Array is ");
+            for(int i = Array.Length - 1; i >= 0; i--)
             {
-                Console.Write(ints[i] + " "); 
+                Console.Write(Array[i] + " ");
             }
         }
     }
