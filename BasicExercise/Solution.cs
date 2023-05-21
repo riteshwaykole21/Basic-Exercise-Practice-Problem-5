@@ -10,20 +10,13 @@ using System.Threading.Tasks;
 
 namespace BasicExercise
 {
-    public class Solution<T>
+    public class Solution
     {
-        public void Number(T Rows)
+        public void Number()
         {
-            Console.WriteLine("Enter a Rows " + Rows);
-            int rows = Convert.ToInt32(Console.ReadLine());
-            for (int i = 1; i <= rows; i++)
-            {
-                for (int j = 1; j <= i; j++)
-                {
-                    Console.Write("*");
-                }
-                Console.Write("\n");
-            }
+            int[] Array = { 10, 20, 30, 40, 50, 60 };
+            for (int i = 0; i < Array.Length; i++)
+                Console.Write(Array[i] + " ");
         }
     }
 }
