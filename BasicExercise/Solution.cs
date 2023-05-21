@@ -14,14 +14,36 @@ namespace BasicExercise
     {
         public void Number()
         {
-            int[] Array = { 10, 20, 50, 70, 100, 55, 12 };
-            int[] array = new int[10];
-            for(int i = 0; i < Array.Length; i++)
+            int count = 0;
+            int[] Array = { 10, 20, 30, 40, 50, 60, 10, 50, 60 };
+            int index = 0;
+            for (int i = 0; i < Array.Length; i++)
             {
-                array[i] = Array[i];
-                Console.Write(array[i] + " ");
+                for (int j = i + 1; j < Array.Length; j++)
+                {
+                    if (Array[i] == Array[j])
+                    {
+                        count++;
+                    }
+                }
             }
+            int[] arr = new int[count];
+            for (int i = 0; i < Array.Length; i++)
+            {
+                for(int j = i + 1; j < Array.Length; j++)
+                {
+                    if(Array[i] == Array[j])
+                    {
+                         arr[index] = Array[j]; 
+                         index++;
+                    }
+                }
+            }
+            foreach(int i in arr)
+            {
+                Console.WriteLine(i);
+            }
+            Console.Write(count);
         }
-         
     }
 }
