@@ -14,9 +14,18 @@ namespace BasicExercise
     {
         public void Number()
         {
-            int[] Array = { 10, 20, 30, 40, 50, 60 };
-            for (int i = 0; i < Array.Length; i++)
-                Console.Write(Array[i] + " ");
+            Console.WriteLine("Enter The Size Of Array");
+            int Size = Convert.ToInt32(Console.ReadLine());
+            int[] ints = new int[Size];
+            Console.WriteLine("Enter The Array Element");
+            for(int i = 0; i < Size; i++)
+            {
+                ints[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for(int i = 0; i < ints.Length; i++)
+            {
+                Console.Write(ints[i] + " "); 
+            }
         }
     }
 }
