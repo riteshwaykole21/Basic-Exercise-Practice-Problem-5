@@ -14,20 +14,14 @@ namespace BasicExercise
     {
         public void Number()
         {
-            Console.WriteLine("Enter The Size Of Array");
-            int size = Convert.ToInt32(Console.ReadLine());
-            int[] Array = new int[size];
-            int sum = 0;
-            Console.WriteLine("Enter The Element Of A Array");
-            for(int i = 0; i < size; i++)
+            int[] Array = { 10, 20, 50, 70, 100, 55, 12 };
+            int[] array = new int[10];
+            for(int i = 0; i < Array.Length; i++)
             {
-                Array[i] = Convert.ToInt32(Console.ReadLine()); 
+                array[i] = Array[i];
+                Console.Write(array[i] + " ");
             }
-            for( int i = 0; i < Array.Length; i++)
-            {
-                sum += Array[i];
-            }
-            Console.WriteLine($" The Sum of Array Element is : {sum}");
         }
+         
     }
 }
